@@ -134,6 +134,9 @@ h1, h2, h3 { line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
 .art-convert span { background: #fff; border-radius: 14px; padding: 26px 22px; font-weight: 700; letter-spacing: .08em; box-shadow: 0 14px 30px rgba(11,11,15,0.1); }
 .art-convert b { font-size: 30px; color: var(--blue-deep); }
 
+.art-lamacook { background: linear-gradient(160deg, #e7f6f7, #fdebe4); }
+.wide .art-lamacook img { max-height: 320px; }
+
 .art-jarrah { background: linear-gradient(160deg, #fff6ec, #ffe7d1); }
 .art-jarrah span { font-family: var(--serif); font-style: italic; font-size: 30px; color: #8a5a2b; padding: 0 24px; text-align: center; }
 

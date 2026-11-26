@@ -1,0 +1,149 @@
+/* LamaCook project page. Uses the shared styles.css and adds the game's warm palette. */
+.lc {
+  --sky: #b5e4e8;
+  --sky-soft: #e7f6f7;
+  --tile: #f4af97;
+  --tile-soft: #fdebe4;
+  --cream: #fbf5ea;
+  --honey: #ffbb45;
+  --brown: #6b3418;
+  --berry: #c9291d;
+}
+.lc .eyebrow, .lc .tag { color: var(--berry); }
+.lc h1 em, .lc h2 em, .lc h3 em { color: var(--brown); }
+
+/* HERO */
+.lc-hero {
+  max-width: var(--max); margin: 0 auto;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center;
+  padding: clamp(40px, 7vw, 88px) clamp(16px, 4vw, 40px) 40px;
+}
+.lc-hero h1 { font-size: clamp(38px, 5.2vw, 64px); font-weight: 700; }
+.lc-facts { list-style: none; padding: 0; margin: 34px 0 0; display: flex; flex-wrap: wrap; gap: 28px; }
+.lc-facts strong { display: block; font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1; }
+.lc-facts span { color: var(--muted); font-size: 14px; }
+
+.lc-hero-art { position: relative; aspect-ratio: 1 / 1.08; max-width: 460px; width: 100%; justify-self: center; }
+.lc-blob {
+  position: absolute; inset: 8% 0 4% 4%;
+  background: var(--sky);
+  border-radius: 46% 54% 42% 58% / 52% 44% 56% 48%;
+}
+.lc-lama { position: absolute; left: 12%; bottom: 2%; width: 76%; }
+.lc-float { position: absolute; animation: bob 6s ease-in-out infinite; }
+.f1 { width: 22%; top: 6%; left: 2%; }
+.f2 { width: 9%; top: 4%; right: 10%; animation-delay: -1.5s; }
+.f3 { width: 24%; bottom: 10%; right: -4%; animation-delay: -3s; }
+.f4 { width: 14%; bottom: 30%; left: -2%; animation-delay: -4.5s; }
+@keyframes bob { 50% { transform: translateY(-12px) rotate(-6deg); } }
+
+/* STORY */
+.lc-two { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.lc-two p { font-size: 19px; color: #33363f; margin: 0; }
+
+/* COLOURED BANDS */
+.lc-band { max-width: none; }
+.lc-sky { background: var(--sky-soft); }
+.lc-tiles { background: var(--tile-soft); }
+.lc-cream { background: var(--cream); }
+
+/* CHARACTER */
+.lc-character { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 48px; align-items: center; }
+.lc-character-art { background: #fff; border-radius: var(--radius); padding: 24px; }
+.lc-character h2 { font-size: clamp(36px, 5vw, 58px); margin: 6px 0 16px; }
+.lc-notes { list-style: none; padding: 0; margin: 20px 0; display: grid; gap: 12px; }
+.lc-notes li { display: flex; gap: 12px; align-items: center; }
+.lc-notes b { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--c); }
+
+/* SCENES */
+.lc-scenes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lc-card { margin: 0; background: var(--soft); border-radius: var(--radius); overflow: hidden; }
+.lc-card img { aspect-ratio: 1600 / 1112; object-fit: cover; width: 100%; }
+.lc-card figcaption { padding: 18px 22px 22px; font-size: 15px; color: #33363f; }
+.lc-card strong { display: block; font-size: 18px; color: var(--ink); margin-bottom: 4px; }
+.lc-wide { margin: 24px 0 0; background: var(--soft); border-radius: var(--radius); padding: clamp(20px, 4vw, 40px); }
+.lc-wide img { max-height: 420px; margin: 0 auto; }
+.lc-wide figcaption { text-align: center; color: var(--muted); font-size: 15px; margin-top: 16px; }
+.lc-wide.flat { background: #fff; padding: 0; overflow: hidden; }
+.lc-wide.flat img { max-height: none; width: 100%; }
+.lc-wide.flat figcaption { padding: 0 24px 22px; }
+
+/* PROPS */
+.lc-props { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.lc-props figure {
+  margin: 0; background: #fff; border-radius: var(--radius);
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  padding: 24px 16px 16px; min-height: 220px;
+  transition: transform .25s ease;
+}
+.lc-props figure:hover { transform: translateY(-4px) rotate(-1deg); }
+.lc-props img { max-height: 130px; width: auto; object-fit: contain; flex: 1; }
+.lc-props figcaption { margin-top: 14px; font-weight: 600; font-size: 15px; }
+
+.lc-pot { margin-top: 48px; text-align: center; }
+.lc-pot h3 { font-size: clamp(26px, 3vw, 34px); margin-bottom: 24px; }
+.lc-pot ol { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; counter-reset: pot; }
+.lc-pot li { background: #fff; border-radius: var(--radius); padding: 24px 20px 18px; display: flex; flex-direction: column; align-items: center; gap: 14px; position: relative; }
+.lc-pot li + li::before { content: "→"; position: absolute; left: -15px; top: 42%; font-size: 22px; color: var(--brown); }
+.lc-pot img { height: 96px; width: auto; object-fit: contain; }
+.lc-pot span { font-weight: 600; font-size: 15px; }
+
+/* UI */
+.lc-ui { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.lc-ui h2 { font-size: clamp(36px, 5vw, 58px); margin: 6px 0 16px; }
+.lc-ui p { color: #33363f; }
+.lc-ui-art { background: var(--sky-soft); border-radius: var(--radius); padding: 40px 28px; display: grid; gap: 28px; justify-items: center; }
+.lc-ui-art img:first-child { width: 86%; }
+.lc-ui-art img:last-child { width: 56%; }
+
+.lc-palette { margin-top: 56px; }
+.lc-palette ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+.lc-palette li { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.lc-palette li::before { content: ""; display: block; height: 84px; border-radius: 18px; background: var(--c); margin-bottom: 10px; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05); }
+.lc-palette span { display: block; color: var(--ink); font-weight: 600; font-size: 14px; }
+
+/* PROCESS */
+.lc-steps { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lc-steps li { background: #fff; border-radius: var(--radius); padding: 24px 26px; }
+.lc-steps b {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--honey); color: var(--brown); font-family: var(--serif); font-size: 24px; font-weight: 400; margin-bottom: 14px;
+}
+.lc-steps h3 { font-size: 22px; margin-bottom: 8px; }
+.lc-steps p { margin: 0; color: #33363f; font-size: 16px; }
+
+/* SCREENSHOTS */
+.lc-shots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.lc-shots img { border-radius: 18px; width: 100%; }
+.lc-shots .wide { grid-column: span 2; }
+.lc-shot-note { background: var(--soft); border-radius: 18px; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 16px; padding: 32px; }
+.lc-shot-note img { width: 92px; border-radius: 22px; }
+.lc-shot-note p { margin: 0; font-size: 18px; color: #33363f; }
+
+/* END */
+.lc-end { background: var(--brown); }
+.lc-end .btn.primary { color: var(--brown); }
+.lc-end h2 em { color: var(--honey); }
+.lc-end-art { position: absolute; width: 380px; right: -60px; bottom: -70px; opacity: 0.25; border-radius: 40px; pointer-events: none; }
+
+/* RESPONSIVE */
+@media (max-width: 880px) {
+  .lc-hero, .lc-two, .lc-character, .lc-ui { grid-template-columns: 1fr; }
+  .lc-hero-art { max-width: 320px; order: -1; }
+  .lc-scenes { grid-template-columns: 1fr; }
+  .lc-props { grid-template-columns: repeat(2, 1fr); }
+  .lc-palette ul { grid-template-columns: repeat(4, 1fr); }
+  .lc-steps { grid-template-columns: 1fr; }
+  .lc-character-art { max-width: 360px; }
+}
+@media (max-width: 600px) {
+  .lc-shots { grid-template-columns: 1fr; }
+  .lc-shots .wide { grid-column: auto; }
+  .lc-pot ol { grid-template-columns: 1fr; }
+  .lc-pot li + li::before { content: "↓"; left: 50%; top: -22px; transform: translateX(-50%); }
+  .lc-palette ul { grid-template-columns: repeat(2, 1fr); }
+  .lc-end-art { width: 240px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-float { animation: none; }
+}

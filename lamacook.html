@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LamaCook – Game design &amp; art · Rimah Aldaghfaq</title>
+<meta name="description" content="How I designed and drew LamaCook, a cozy iOS cooking game about making Mahala on a rainy day. Character, world, props and hand-drawn UI, all drawn in Procreate.">
+<meta property="og:title" content="LamaCook – Game design &amp; art">
+<meta property="og:description" content="A cozy iOS cooking game, drawn by hand in Procreate.">
+<meta property="og:image" content="assets/lamacook/good-job.webp">
+<link rel="icon" href="assets/lamacook/icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="lamacook.css">
+</head>
+<body class="lc">
+
+<header class="nav">
+  <a class="brand" href="index.html">Rimah<span>.</span></a>
+  <nav>
+    <a href="#story">Story</a>
+    <a href="#art">Art</a>
+    <a href="#game">Game</a>
+    <a class="pill" href="index.html#projects">All projects</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="lc-hero">
+    <div class="lc-hero-text">
+      <p class="eyebrow">iOS game · Design, art &amp; code</p>
+      <h1>LamaCook: cooking <em>Mahala</em> on a rainy day.</h1>
+      <p class="lead">A cozy cooking game for iPhone and iPad. Lama wants something warm, so you turn on the stove, pour, sprinkle and stir until the Mahala is ready. I designed, drew and built every part of it myself.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://apps.apple.com/app/id6478581944" target="_blank" rel="noopener">View on the App Store</a>
+        <a class="btn" href="#art">See the art</a>
+      </div>
+      <ul class="lc-facts">
+        <li><strong>Procreate</strong><span>every drawing</span></li>
+        <li><strong>SpriteKit</strong><span>+ SwiftUI</span></li>
+        <li><strong>2</strong><span>languages, Arabic &amp; English</span></li>
+      </ul>
+    </div>
+    <div class="lc-hero-art" aria-hidden="true">
+      <span class="lc-blob"></span>
+      <img class="lc-lama" src="assets/lamacook/lama.webp" alt="" width="1000" height="1396">
+      <img class="lc-float f1" src="assets/lamacook/date.webp" alt="" width="303" height="204">
+      <img class="lc-float f2" src="assets/lamacook/whisk.webp" alt="" width="153" height="440">
+      <img class="lc-float f3" src="assets/lamacook/cup.webp" alt="" width="488" height="343">
+      <img class="lc-float f4" src="assets/lamacook/pepper.webp" alt="" width="236" height="244">
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="section lc-story">
+    <div class="section-head">
+      <h2>Where it <em>started</em></h2>
+    </div>
+    <div class="lc-two">
+      <p>I first made LamaCook for Apple's <strong>WWDC24 Swift Student Challenge</strong>, as a small Swift Playgrounds app. The idea came from a simple feeling: a rainy day in Saudi Arabia, and someone at home making Mahala, a warm drink of dates, whole-wheat flour and black pepper.</p>
+      <p>Two years later I came back to it and rebuilt it as a full Xcode project, <strong>version 2.0</strong>. The recipe now follows real steps in order, the pot changes as you cook, stirring swirls the ingredients, and the whole interface is drawn in the same hand-painted style as the game.</p>
+    </div>
+  </section>
+
+  <!-- CHARACTER -->
+  <section id="art" class="lc-band lc-sky">
+    <div class="section lc-character">
+      <div class="lc-character-art">
+        <img src="assets/lamacook/lama.webp" alt="Lama, a girl with half red and half black hair, a lavender jacket, a pink backpack and yellow sneakers, standing next to a blue bucket" loading="lazy" width="1000" height="1396">
+      </div>
+      <div>
+        <p class="tag">Character</p>
+        <h2>Meet <em>Lama</em></h2>
+        <p>Lama is the heart of the game, so I drew her first. I wanted her to feel friendly and a little shy, with a look kids remember at a glance.</p>
+        <ul class="lc-notes">
+          <li><b style="--c:#c9291d"></b>Hair split in red and black, her signature shape</li>
+          <li><b style="--c:#c7adde"></b>An oversized lavender jacket with soft blue shading</li>
+          <li><b style="--c:#f98b90"></b>A pink school backpack, ready for the day</li>
+          <li><b style="--c:#ecA028"></b>Bright yellow sneakers to lift the whole palette</li>
+        </ul>
+        <p class="muted">Every line keeps a slightly wobbly, hand-drawn edge. That became the rule for the rest of the game.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD -->
+  <section class="section">
+    <div class="section-head">
+      <p class="tag">World</p>
+      <h2>Three <em>places</em></h2>
+      <p>The game has three scenes. Each one is a single full-screen painting.</p>
+    </div>
+    <div class="lc-scenes">
+      <figure class="lc-card">
+        <img src="assets/lamacook/home-screen.webp" alt="Home screen: Lama in front of a white house with a palm tree and bougainvillea, saying hi in a speech bubble" loading="lazy" width="1600" height="1112">
+        <figcaption><strong>Home</strong> A white house with a carved wooden door, bougainvillea and a palm tree. Lama says hi and invites you to cook.</figcaption>
+      </figure>
+      <figure class="lc-card">
+        <img src="assets/lamacook/kitchen-screen.webp" alt="Kitchen scene: a pink tiled wall, a counter and a two-burner stove under a Mahala poster" loading="lazy" width="1600" height="1112">
+        <figcaption><strong>Kitchen</strong> Pink tiles, a warm counter and a stove, with a hanging poster of the Mahala you're about to make.</figcaption>
+      </figure>
+      <figure class="lc-card">
+        <img src="assets/lamacook/good-job.webp" alt="Result scene: a bowl of Mahala with butter on top, the words good job, and Lama smiling in the rain" loading="lazy" width="1600" height="1112">
+        <figcaption><strong>Good job!</strong> The finished bowl of Mahala, and a happy Lama in the rain.</figcaption>
+      </figure>
+    </div>
+    <figure class="lc-wide">
+      <img src="assets/lamacook/house.webp" alt="The house drawing on its own, before it was placed in the home scene" loading="lazy" width="1239" height="1051">
+      <figcaption>I drew the house on its own layer first, so I could move it around the home scene.</figcaption>
+    </figure>
+  </section>
+
+  <!-- PROPS -->
+  <section class="lc-band lc-tiles">
+    <div class="section">
+      <div class="section-head">
+        <p class="tag">Props</p>
+        <h2>The <em>ingredients</em></h2>
+        <p>Every object you can touch in the game is its own drawing, so it can be picked up, tipped and poured.</p>
+      </div>
+      <div class="lc-props">
+        <figure><img src="assets/lamacook/water.webp" alt="A glass of hot water" loading="lazy" width="379" height="446"><figcaption>Hot water</figcaption></figure>
+        <figure><img src="assets/lamacook/dates.webp" alt="A handful of dates" loading="lazy" width="385" height="258"><figcaption>Dates</figcaption></figure>
+        <figure><img src="assets/lamacook/cup.webp" alt="A red measuring cup full of flour" loading="lazy" width="488" height="343"><figcaption>Wheat flour</figcaption></figure>
+        <figure><img src="assets/lamacook/pepper.webp" alt="A black pepper jar" loading="lazy" width="236" height="244"><figcaption>Black pepper</figcaption></figure>
+        <figure><img src="assets/lamacook/pepper-pour.webp" alt="The pepper jar tipped over, with pepper falling" loading="lazy" width="257" height="409"><figcaption>…and pouring</figcaption></figure>
+        <figure><img src="assets/lamacook/whisk.webp" alt="A whisk with a wooden handle" loading="lazy" width="153" height="440"><figcaption>Whisk</figcaption></figure>
+        <figure><img src="assets/lamacook/flour.webp" alt="A bag of whole-wheat flour labelled Saudi made" loading="lazy" width="500" height="593"><figcaption>Flour bag</figcaption></figure>
+        <figure><img src="assets/lamacook/hand.webp" alt="A pointing hand used for hints" loading="lazy" width="346" height="316"><figcaption>Hint hand</figcaption></figure>
+      </div>
+
+      <div class="lc-pot">
+        <h3>The pot <em>changes</em> as you cook</h3>
+        <ol>
+          <li><img src="assets/lamacook/pot.webp" alt="An empty pan" loading="lazy" width="500" height="201"><span>Empty</span></li>
+          <li><img src="assets/lamacook/water-pot.webp" alt="The pan with hot water" loading="lazy" width="500" height="200"><span>Add hot water</span></li>
+          <li><img src="assets/lamacook/mahala-pot.webp" alt="The pan full of brown Mahala" loading="lazy" width="500" height="200"><span>Stir until ready</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- UI -->
+  <section class="section">
+    <div class="lc-ui">
+      <div>
+        <p class="tag">Interface</p>
+        <h2>Buttons drawn <em>by hand</em></h2>
+        <p>Instead of standard iOS buttons, I painted the interface like the rest of the art: a honey-coloured plank with a cream edge, and two dates tucked on the corners like decoration.</p>
+        <p>In version 2.0 the home, replay and sound buttons, the step card and the timer all reuse these two drawings, so nothing on screen looks out of place.</p>
+      </div>
+      <div class="lc-ui-art">
+        <img src="assets/lamacook/plank.webp" alt="A honey-coloured plank button with dates on the corners" loading="lazy" width="720" height="248">
+        <img src="assets/lamacook/sound-buttons.webp" alt="Sound on and sound off buttons in the same style" loading="lazy" width="524" height="243">
+      </div>
+    </div>
+
+    <div class="lc-palette" aria-label="Colour palette">
+      <h3 class="mini">Palette, picked from the drawings</h3>
+      <ul>
+        <li style="--c:#b5e4e8"><span>Rainy sky</span>#B5E4E8</li>
+        <li style="--c:#f4af97"><span>Kitchen tiles</span>#F4AF97</li>
+        <li style="--c:#f4ede1"><span>House walls</span>#F4EDE1</li>
+        <li style="--c:#ffbb45"><span>Honey buttons</span>#FFBB45</li>
+        <li style="--c:#c9291d"><span>Lama's hair</span>#C9291D</li>
+        <li style="--c:#c7adde"><span>Lavender jacket</span>#C7ADDE</li>
+        <li style="--c:#6b3418"><span>Mahala</span>#6B3418</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="lc-band lc-cream">
+    <div class="section">
+      <div class="section-head">
+        <p class="tag">Process</p>
+        <h2>From drawing <em>to game</em></h2>
+      </div>
+      <figure class="lc-wide flat">
+        <img src="assets/lamacook/kitchen.webp" alt="An early kitchen illustration with all the ingredients on a tiled counter: dates, oil, whisk, pepper, water, flour, a cup of flour, butter and a pan on the stove" loading="lazy" width="2000" height="923">
+        <figcaption>An early kitchen illustration. I gathered every ingredient in one picture first, then cut each one out to become a game piece.</figcaption>
+      </figure>
+      <ol class="lc-steps">
+        <li><b>1</b><h3>Sketch the idea</h3><p>One scene with everything you need for Mahala, to see the colours and shapes together.</p></li>
+        <li><b>2</b><h3>Separate the pieces</h3><p>Redraw each ingredient, the pot and the buttons on their own layers in Procreate, with transparent backgrounds.</p></li>
+        <li><b>3</b><h3>Bring them to life</h3><p>Place them in SpriteKit, so you can drag, tip, pour and stir them with your finger.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section id="game" class="section">
+    <div class="section-head">
+      <p class="tag">The game</p>
+      <h2>Six steps to a warm <em>Mahala</em></h2>
+      <p>Turn on the stove, pour the hot water, add the dates, the wheat flour and the black pepper, then stir until it's ready. Follow the order to earn three stars.</p>
+    </div>
+    <div class="lc-shots">
+      <img src="assets/lamacook/shot-water.webp" alt="iPad: pouring hot water into the pan" loading="lazy" width="1600" height="1200">
+      <img src="assets/lamacook/shot-stir.webp" alt="iPad: stirring the Mahala with the whisk" loading="lazy" width="1600" height="1200">
+      <img class="wide" src="assets/lamacook/shot-flour.webp" alt="iPhone: adding the wheat flour" loading="lazy" width="1600" height="736">
+      <img src="assets/lamacook/shot-arabic.webp" alt="iPad in Arabic: the first step, turning on the stove" loading="lazy" width="1600" height="1200">
+      <div class="lc-shot-note">
+        <img src="assets/lamacook/icon.webp" alt="LamaCook app icon" loading="lazy" width="400" height="400">
+        <p><strong>Built with</strong> Swift, SwiftUI and SpriteKit, for iPhone and iPad, in Arabic and English.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="contact lc-end">
+    <img class="lc-end-art" src="assets/lamacook/good-job.webp" alt="" aria-hidden="true" loading="lazy" width="1600" height="1112">
+    <h2>Cook a bowl with <em>Lama</em>.</h2>
+    <p>LamaCook is on the App Store for iPhone and iPad.</p>
+    <div class="cta center">
+      <a class="btn primary" href="https://apps.apple.com/app/id6478581944" target="_blank" rel="noopener">View on the App Store</a>
+      <a class="btn light" href="index.html#projects">More projects</a>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Rimah Aldaghfaq. </footer>
+
+</body>
+</html>
